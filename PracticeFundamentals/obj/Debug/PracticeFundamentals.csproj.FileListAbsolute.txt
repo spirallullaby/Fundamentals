@@ -7,3 +7,9 @@ C:\Users\rstefanova\documents\visual studio 2017\Projects\PracticeFundamentals\P
 D:\Prj\TestProjects\Source\Repos\Fundamentals\PracticeFundamentals\bin\Debug\PracticeFundamentals.exe.config
 D:\Prj\TestProjects\Source\Repos\Fundamentals\PracticeFundamentals\obj\Debug\PracticeFundamentals.exe
 D:\Prj\TestProjects\Source\Repos\Fundamentals\PracticeFundamentals\obj\Debug\PracticeFundamentals.pdb
+D:\DEV\Prj\GitHub\PracticeFundamentals\bin\Debug\PracticeFundamentals.exe.config
+D:\DEV\Prj\GitHub\PracticeFundamentals\obj\Debug\PracticeFundamentals.exe
+D:\DEV\Prj\GitHub\PracticeFundamentals\obj\Debug\PracticeFundamentals.pdb
+D:\DEV\Prj\GitHub\PracticeFundamentals\bin\Debug\PracticeFundamentals.exe
+D:\DEV\Prj\GitHub\PracticeFundamentals\bin\Debug\PracticeFundamentals.pdb
+D:\DEV\Prj\GitHub\PracticeFundamentals\obj\Debug\PracticeFundamentals.csprojResolveAssemblyReference.cache
