@@ -1,0 +1,9 @@
+C:\Users\rstefanova\documents\visual studio 2017\Projects\PracticeFundamentals\PracticeFundamentals\bin\Debug\PracticeFundamentals.exe.config
+C:\Users\rstefanova\documents\visual studio 2017\Projects\PracticeFundamentals\PracticeFundamentals\bin\Debug\PracticeFundamentals.exe
+C:\Users\rstefanova\documents\visual studio 2017\Projects\PracticeFundamentals\PracticeFundamentals\bin\Debug\PracticeFundamentals.pdb
+C:\Users\rstefanova\documents\visual studio 2017\Projects\PracticeFundamentals\PracticeFundamentals\obj\Debug\PracticeFundamentals.csprojResolveAssemblyReference.cache
+C:\Users\rstefanova\documents\visual studio 2017\Projects\PracticeFundamentals\PracticeFundamentals\obj\Debug\PracticeFundamentals.exe
+C:\Users\rstefanova\documents\visual studio 2017\Projects\PracticeFundamentals\PracticeFundamentals\obj\Debug\PracticeFundamentals.pdb
+D:\Prj\TestProjects\Source\Repos\Fundamentals\PracticeFundamentals\bin\Debug\PracticeFundamentals.exe.config
+D:\Prj\TestProjects\Source\Repos\Fundamentals\PracticeFundamentals\obj\Debug\PracticeFundamentals.exe
+D:\Prj\TestProjects\Source\Repos\Fundamentals\PracticeFundamentals\obj\Debug\PracticeFundamentals.pdb
