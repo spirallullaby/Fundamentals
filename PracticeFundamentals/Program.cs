@@ -10,8 +10,18 @@ namespace PracticeFundamentals
     {
         static void Main(string[] args)
         {
-            TestQueue();
-            TestStack();
+            //TestQueue();
+            //TestStack();
+            TestSortedBinaryTree();
+        }
+
+        private static void TestSortedBinaryTree()
+        {
+            var tree = new SortedBinaryTree(1);
+            var items = new[] { 1, 2, 3, 4, 5, 6, 7 };
+            tree.AddItems(items);
+            tree.DrawTree();
+            Console.ReadLine();
         }
 
         private static void TestQueue()
