@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PracticeFundamentals
 {
@@ -12,7 +8,8 @@ namespace PracticeFundamentals
         {
             //TestQueue();
             //TestStack();
-            TestSortedBinaryTree();
+            //TestSortedBinaryTree();
+            TestMaxMatrixFinder();
         }
 
         private static void TestSortedBinaryTree()
@@ -51,6 +48,18 @@ namespace PracticeFundamentals
             {
                 Console.WriteLine(stack.Pop());
             }
+            Console.ReadLine();
+        }
+
+        private static void TestMaxMatrixFinder()
+        {
+            Console.WriteLine("Test matrix 1");
+            Exercises.MaxMatrixFinder.PrintMaxMatrixes(Exercises.MaxMatrixFinder.testMatrix);
+            Console.WriteLine("Test matrix 2");
+            Exercises.MaxMatrixFinder.PrintMaxMatrixes(Exercises.MaxMatrixFinder.testMatrix1);
+            Console.WriteLine("Test matrix 3");
+            Exercises.MaxMatrixFinder.PrintMaxMatrixes(Exercises.MaxMatrixFinder.testMatrix2);
+
             Console.ReadLine();
         }
     }
