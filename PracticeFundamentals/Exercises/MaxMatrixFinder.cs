@@ -25,6 +25,7 @@ namespace PracticeFundamentals.Exercises
             new int[]{ 1,1,1 },
             new int[]{ 1,1,1 }
         };
+
         private static IEnumerable<IEnumerable<Tuple<int, int>>> GetMaxMatrix(int[][] inputMatrix)
         {
             var indecesOf1 = inputMatrix.SelectMany((r, ri) => r.Select((c, ci) => Tuple.Create(Tuple.Create(ri,ci), c)))
@@ -84,7 +85,8 @@ namespace PracticeFundamentals.Exercises
             var maxCount = allMatrixes.Max(mtx => mtx.Count());
             var winnerMatrixes = allMatrixes.Where(mtx => mtx.Count == maxCount);
             return winnerMatrixes;
-        } 
+        }
+
         public static void PrintMaxMatrixes(int[][] inputMatrix)
         {
             var maxMatrixes = GetMaxMatrix(inputMatrix);
