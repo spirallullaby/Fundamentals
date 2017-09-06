@@ -10,7 +10,8 @@ namespace PracticeFundamentals
             //TestStack();
             //TestSortedBinaryTree();
             //TestMaxMatrixFinder();
-            TestQuickSort();
+            //TestQuickSort();
+            TestSelectionSort();
         }
 
         private static void TestSortedBinaryTree()
@@ -68,6 +69,16 @@ namespace PracticeFundamentals
             Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.QuickSort.TestCase1)));
             Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.QuickSort.TestCase2)));
             Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.QuickSort.TestCase3)));
+            Console.ReadLine();
+        }
+
+        private static void TestSelectionSort()
+        {
+            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.QuickSort.TestCase1)));
+            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.QuickSort.TestCase2)));
+            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.QuickSort.TestCase3)));
+            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.SelectionSort.TestCase4)));
+            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.SelectionSort.TestCase5)));
             Console.ReadLine();
         }
     }

@@ -51,6 +51,7 @@
     <Compile Include="DataStructures\Tree.cs" />
     <Compile Include="DataStructures\TreeNode.cs" />
     <Compile Include="Sorting\QuickSort.cs" />
+    <Compile Include="Sorting\SelectionSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
