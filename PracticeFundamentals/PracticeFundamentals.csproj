@@ -50,6 +50,7 @@
     <Compile Include="DataStructures\SortedBinaryTree.cs" />
     <Compile Include="DataStructures\Tree.cs" />
     <Compile Include="DataStructures\TreeNode.cs" />
+    <Compile Include="Sorting\QuickSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

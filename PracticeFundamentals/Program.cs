@@ -9,7 +9,8 @@ namespace PracticeFundamentals
             //TestQueue();
             //TestStack();
             //TestSortedBinaryTree();
-            TestMaxMatrixFinder();
+            //TestMaxMatrixFinder();
+            TestQuickSort();
         }
 
         private static void TestSortedBinaryTree()
@@ -60,6 +61,13 @@ namespace PracticeFundamentals
             Console.WriteLine("Test matrix 3");
             Exercises.MaxMatrixFinder.PrintMaxMatrixes(Exercises.MaxMatrixFinder.testMatrix2);
 
+            Console.ReadLine();
+        }
+        private static void TestQuickSort()
+        {
+            Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.QuickSort.TestCase1)));
+            Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.QuickSort.TestCase2)));
+            Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.QuickSort.TestCase3)));
             Console.ReadLine();
         }
     }
