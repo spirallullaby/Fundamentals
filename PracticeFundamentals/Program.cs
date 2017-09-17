@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PracticeFundamentals.DataStructures;
+using System;
 
 namespace PracticeFundamentals
 {
@@ -11,7 +12,8 @@ namespace PracticeFundamentals
             //TestSortedBinaryTree();
             //TestMaxMatrixFinder();
             //TestQuickSort();
-            TestSelectionSort();
+            //TestSelectionSort();
+            TestLinkedList();
         }
 
         private static void TestSortedBinaryTree()
@@ -25,7 +27,7 @@ namespace PracticeFundamentals
 
         private static void TestQueue()
         {
-            var queue = new Queue();
+            var queue = new Queue<string>();
             queue.Enqueue("First");
             queue.Enqueue("Second");
             queue.Enqueue("Third");
@@ -64,6 +66,27 @@ namespace PracticeFundamentals
 
             Console.ReadLine();
         }
+
+        private static void TestLinkedList()
+        {
+            var ll = new LinkedList<string>();
+            var first = new LinkedListNode<string> { Data = "first" };
+            var second = new LinkedListNode<string> { Data = "second" };
+            var third = new LinkedListNode<string> { Data = "third" };
+            ll.AddData(first);
+            ll.AddData(second);
+            ll.AddData(third);
+            Console.WriteLine(ll);
+            ll.RemoveData(first);
+            first = new LinkedListNode<string> { Data = "first" };
+            Console.WriteLine(ll);
+            ll.AddData(first);
+            third = new LinkedListNode<string> { Data = "third" };
+            ll.RemoveData(third);
+            Console.WriteLine(ll);
+            Console.ReadLine();
+        }
+
         private static void TestQuickSort()
         {
             Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.QuickSort.TestCase1)));

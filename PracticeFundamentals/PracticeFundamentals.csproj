@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStructures\LinkedList.cs" />
+    <Compile Include="DataStructures\LinkedListNode.cs" />
     <Compile Include="Exercises\MaxMatrixFinder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

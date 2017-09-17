@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PracticeFundamentals
+namespace PracticeFundamentals.DataStructures
 {
     class TreeNode
     {

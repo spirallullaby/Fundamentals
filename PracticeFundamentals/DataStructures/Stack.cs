@@ -1,4 +1,4 @@
-﻿namespace PracticeFundamentals
+﻿namespace PracticeFundamentals.DataStructures
 {
     public class LinkedNode
     {

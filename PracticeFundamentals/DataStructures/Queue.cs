@@ -1,28 +1,17 @@
-﻿namespace PracticeFundamentals
-{
-    class LinkedListNode
+﻿namespace PracticeFundamentals.DataStructures
+{  
+    class Queue<T>
     {
-        public string Data
-        {
-            get; set;
-        }
-        public LinkedListNode NextNode
-        {
-            get; set;
-        }
-    }
-    class Queue
-    {
-        LinkedListNode head;
-        LinkedListNode tail;
+        LinkedListNode<T> head;
+        LinkedListNode<T> tail;
         public int Count
         {
             private set;
             get;
         } = 0;
-        public void Enqueue(string data)
+        public void Enqueue(T data)
         {
-            var newNode = new LinkedListNode()
+            var newNode = new LinkedListNode<T>()
             {
                 Data = data,
             };
@@ -37,7 +26,7 @@
             tail = newNode;
             Count++;
         }
-        public string Dequeue()
+        public T Dequeue()
         {
             var result = head.Data;
             head = head.NextNode;
