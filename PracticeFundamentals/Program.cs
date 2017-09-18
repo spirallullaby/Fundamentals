@@ -13,7 +13,10 @@ namespace PracticeFundamentals
             //TestMaxMatrixFinder();
             //TestQuickSort();
             //TestSelectionSort();
-            TestLinkedList();
+            //TestLinkedList();
+            //TestBubbleSort();
+            //TestInsertionSort();
+            TestMergeSort();
         }
 
         private static void TestSortedBinaryTree()
@@ -89,19 +92,47 @@ namespace PracticeFundamentals
 
         private static void TestQuickSort()
         {
-            Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.QuickSort.TestCase1)));
-            Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.QuickSort.TestCase2)));
-            Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.QuickSort.TestCase3)));
+            Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.SortTestData.TestCase1)));
+            Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.SortTestData.TestCase2)));
+            Console.WriteLine(string.Join(", ", Sorting.QuickSort.Quicksort(Sorting.SortTestData.TestCase3)));
             Console.ReadLine();
         }
 
         private static void TestSelectionSort()
         {
-            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.QuickSort.TestCase1)));
-            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.QuickSort.TestCase2)));
-            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.QuickSort.TestCase3)));
-            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.SelectionSort.TestCase4)));
-            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.SelectionSort.TestCase5)));
+            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.SortTestData.TestCase1)));
+            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.SortTestData.TestCase2)));
+            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.SortTestData.TestCase3)));
+            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.SortTestData.TestCase4)));
+            Console.WriteLine(string.Join(", ", Sorting.SelectionSort.Selectionsort(Sorting.SortTestData.TestCase5)));
+            Console.ReadLine();
+        }
+
+        private static void TestBubbleSort()
+        {
+            Console.WriteLine(string.Join(", ", Sorting.BubbleSort.Bubblesort(Sorting.SortTestData.TestCase1)));
+            Console.WriteLine(string.Join(", ", Sorting.BubbleSort.Bubblesort(Sorting.SortTestData.TestCase2)));
+            Console.WriteLine(string.Join(", ", Sorting.BubbleSort.Bubblesort(Sorting.SortTestData.TestCase3)));
+            Console.WriteLine(string.Join(", ", Sorting.BubbleSort.Bubblesort(Sorting.SortTestData.TestCase4)));
+            Console.WriteLine(string.Join(", ", Sorting.BubbleSort.Bubblesort(Sorting.SortTestData.TestCase5)));
+            Console.ReadLine();
+        }
+        private static void TestInsertionSort()
+        {
+            Console.WriteLine(string.Join(", ", Sorting.InsertionSort.Insertionsort(Sorting.SortTestData.TestCase1)));
+            Console.WriteLine(string.Join(", ", Sorting.InsertionSort.Insertionsort(Sorting.SortTestData.TestCase2)));
+            Console.WriteLine(string.Join(", ", Sorting.InsertionSort.Insertionsort(Sorting.SortTestData.TestCase3)));
+            Console.WriteLine(string.Join(", ", Sorting.InsertionSort.Insertionsort(Sorting.SortTestData.TestCase4)));
+            Console.WriteLine(string.Join(", ", Sorting.InsertionSort.Insertionsort(Sorting.SortTestData.TestCase5)));
+            Console.ReadLine();
+        }
+        private static void TestMergeSort()
+        {
+            Console.WriteLine(string.Join(", ", Sorting.MergeSort.Mergesort(Sorting.SortTestData.TestCase1)));
+            Console.WriteLine(string.Join(", ", Sorting.MergeSort.Mergesort(Sorting.SortTestData.TestCase2)));
+            Console.WriteLine(string.Join(", ", Sorting.MergeSort.Mergesort(Sorting.SortTestData.TestCase3)));
+            Console.WriteLine(string.Join(", ", Sorting.MergeSort.Mergesort(Sorting.SortTestData.TestCase4)));
+            Console.WriteLine(string.Join(", ", Sorting.MergeSort.Mergesort(Sorting.SortTestData.TestCase5)));
             Console.ReadLine();
         }
     }

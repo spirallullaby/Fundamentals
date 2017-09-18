@@ -6,9 +6,6 @@ namespace PracticeFundamentals.Sorting
 {
     public static class QuickSort
     {
-        public static int[] TestCase1 = new int[] { 0, 5, -6, 4, -20, 9, 2};
-        public static int[] TestCase2 = new int[] { 0, 1, 2, 3, 4, 5, 6 };
-        public static int[] TestCase3 = new int[] { 0, -1, -2, -3, -4, -5 };
         public static int[] Quicksort(int[] arr)
         {
             if (arr.Length <= 1)
