@@ -16,7 +16,8 @@ namespace PracticeFundamentals
             //TestLinkedList();
             //TestBubbleSort();
             //TestInsertionSort();
-            TestMergeSort();
+            //TestMergeSort();
+            TestHashTable();
         }
 
         private static void TestSortedBinaryTree()
@@ -117,6 +118,7 @@ namespace PracticeFundamentals
             Console.WriteLine(string.Join(", ", Sorting.BubbleSort.Bubblesort(Sorting.SortTestData.TestCase5)));
             Console.ReadLine();
         }
+
         private static void TestInsertionSort()
         {
             Console.WriteLine(string.Join(", ", Sorting.InsertionSort.Insertionsort(Sorting.SortTestData.TestCase1)));
@@ -126,6 +128,7 @@ namespace PracticeFundamentals
             Console.WriteLine(string.Join(", ", Sorting.InsertionSort.Insertionsort(Sorting.SortTestData.TestCase5)));
             Console.ReadLine();
         }
+
         private static void TestMergeSort()
         {
             Console.WriteLine(string.Join(", ", Sorting.MergeSort.Mergesort(Sorting.SortTestData.TestCase1)));
@@ -133,6 +136,22 @@ namespace PracticeFundamentals
             Console.WriteLine(string.Join(", ", Sorting.MergeSort.Mergesort(Sorting.SortTestData.TestCase3)));
             Console.WriteLine(string.Join(", ", Sorting.MergeSort.Mergesort(Sorting.SortTestData.TestCase4)));
             Console.WriteLine(string.Join(", ", Sorting.MergeSort.Mergesort(Sorting.SortTestData.TestCase5)));
+            Console.ReadLine();
+        }
+
+        private static void TestHashTable()
+        {
+            var ht = new HashTable<string, int>(5);
+            ht.Add("one", 1);
+            ht.Add("two", 2);
+            ht.Add("three", 3);
+            ht.Add("four", 4);
+            ht.Add("five", 5);
+            Console.WriteLine(ht.GetValue("one"));
+            Console.WriteLine(ht.GetValue("two"));
+            Console.WriteLine(ht.GetValue("three"));
+            Console.WriteLine(ht.GetValue("four"));
+            Console.WriteLine(ht.GetValue("five"));
             Console.ReadLine();
         }
     }

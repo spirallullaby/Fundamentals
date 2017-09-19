@@ -6,82 +6,61 @@ namespace PracticeFundamentals.Sorting
 {
     class MergeSort
     {
-        public static int[] Mergesort(int[] arr)
+        public static void DoMerge(int[] numbers, int left, int middle, int right)
         {
-            var split = Split(arr);
-            var cache = new List<int[]>();
-            do
+            var elementsCount = (right - left + 1);
+            var cache = new int[elementsCount];
+            
+            var leftEnd = (middle - 1);
+            var currentPosition = 0;
+            var cacheLeft = left;
+            //while there are elements within the left and the right split
+            while ((left <= leftEnd) && (middle <= right))
             {
-                var currentTwo = split.Take(2);
-                split = split.Skip(2).ToArray();
-                //cache.Add(Merge(currentTwo.ElementAt(0), currentTwo.ElementAt(1) ?? null));
-                //split = cache.ToArray();
-            } while (split.Length != 1);
-            return split[0];
-        }
-        public static int[] Merge(int[] leftArr, int[] rightArr)
-        {
-            var leftArrLength = leftArr?.Length ?? 0;
-            var rightArrLength = rightArr?.Length ?? 0;
-            var result = new int[leftArrLength + rightArrLength];
-            var leftArrCount = 0;
-            var rightArrCount = 0;
-            var resultCount = 0;
-            while(leftArrCount < leftArrLength && rightArrCount < rightArrLength)
-            {
-                if(leftArr[leftArrCount] < rightArr[rightArrCount])
+                if (numbers[left] <= numbers[middle])
                 {
-                    result[resultCount] = leftArr[leftArrCount];
-                    leftArrCount++;
+                    cache[currentPosition++] = numbers[left++];
                 }
                 else
                 {
-                    result[resultCount] = rightArr[rightArrCount];
-                    rightArrCount++;
+                    cache[currentPosition++] = numbers[middle++];
                 }
-                resultCount++;
             }
-            if(resultCount != result.Count())
+
+            //if there are leftout elements in the left split
+            while (left <= leftEnd)
             {
-                if(rightArrCount < rightArrLength - 1)
-                {
-                    while(rightArrCount < rightArrLength)
-                    {
-                        result[resultCount] = rightArr[rightArrCount];
-                    }
-                }
-                if (leftArrCount < leftArrLength - 1)
-                {
-                    while (leftArrCount < leftArrLength)
-                    {
-                        result[resultCount] = leftArr[leftArrCount];
-                    }
-                }
+                cache[currentPosition++] = numbers[left++];
             }
-            return result;
+            //if there are leftout elements in the right split
+            while (middle <= right)
+            {
+                cache[currentPosition++] = numbers[middle++];
+            }
+
+            for (var i = 0; i < currentPosition; i++)
+            {
+                numbers[cacheLeft] = cache[i];
+                cacheLeft++;
+            }
         }
 
-        public static int[][] Split(int[] arr)
+        public static int[] Mergesort(int[] numbers, int left = 0, int right = int.MinValue)
         {
-            if (arr.Length == 2)
+            if (right == int.MinValue)
             {
-                var res = new int[2][]
-                {
-                   new int[] { arr[0] },
-                   new int[] { arr[1] }
-                };
-                return res;
+                right = numbers.Length - 1;
             }
-            if(arr.Length == 1)
+            if (right > left)
             {
-                return new int[][]
-                {
-                    new int[] {arr[0]}
-                };
+                var mid = (right + left) / 2;
+                Mergesort(numbers, left, mid);
+                Mergesort(numbers, (mid + 1), right);
+
+                DoMerge(numbers, left, (mid + 1), right);
             }
-            var mid = (int)Math.Round((float)arr.Length / 2);
-            var result = Split(arr.Take(mid).ToArray()).Concat(Split(arr.Skip(mid + 1).ToArray()));
-            return result.ToArray();            
+            return numbers;
         }
+
     }
 }

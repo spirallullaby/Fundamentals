@@ -4,51 +4,47 @@ using System.Collections.Generic;
 
 namespace PracticeFundamentals.DataStructures
 {
-    class LinkedList<T> : IEnumerable<T>
+    class LinkedList<T>
     {
         int count;
-        LinkedListNode<T> head;
+        public LinkedListNode<T> Head
+        {
+            get; private set;
+        }
         LinkedListNode<T> tail;
         
-        public IEnumerator<T> GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            LinkedListNode<T> temp = head;
-            for (int i = 0; i < count; i++)
-            {
-                yield return temp.Data;
-                temp = temp.NextNode;
-            }
-        }
         public void AddData(LinkedListNode<T> newNode)
         {
-            if (head == null)
+            if (Head == null)
             {
-                head = newNode;
+                Head = newNode;
                 tail = newNode;
             }
             tail.NextNode = newNode;
             tail = tail.NextNode;
         }
-        public void GetNode()
+        public LinkedListNode<T> GetNode(LinkedListNode<T> newNode)
         {
-
+            var currentNode = Head;
+            while(currentNode != null)
+            {
+                if (currentNode.Data.Equals(newNode.Data))
+                    break;
+                currentNode = currentNode.NextNode;
+            }
+            return currentNode;
         }
         public void RemoveData(LinkedListNode<T> node)
         {
-            var currentNode = head;
-            var prevNode = head;
+            var currentNode = Head;
+            var prevNode = Head;
             while(currentNode != node && currentNode != null)
             {
                 prevNode = currentNode;
                 currentNode = currentNode.NextNode;
             }
             if (prevNode == currentNode)
-                head = currentNode.NextNode;
+                Head = currentNode.NextNode;
             else
                 prevNode.NextNode = currentNode != null ? currentNode.NextNode : null;
         }
@@ -56,9 +52,9 @@ namespace PracticeFundamentals.DataStructures
         public override string ToString()
         {
             string result = string.Empty;
-            if (head == null)
+            if (Head == null)
                 return result;
-            var currentNode = head;
+            var currentNode = Head;
             while(currentNode != null)
             {
                 result += currentNode.Data + ", ";

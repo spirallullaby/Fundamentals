@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataStructures\HashSet.cs" />
+    <Compile Include="DataStructures\HashTable.cs" />
     <Compile Include="DataStructures\LinkedList.cs" />
     <Compile Include="DataStructures\LinkedListNode.cs" />
     <Compile Include="Exercises\MaxMatrixFinder.cs" />
